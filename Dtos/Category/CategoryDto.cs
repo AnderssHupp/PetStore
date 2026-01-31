@@ -1,4 +1,4 @@
-﻿namespace Loja.Dtos
+﻿namespace Loja.Dtos.Category
 {
     public record CategoryDto(
         int Id, 

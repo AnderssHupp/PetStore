@@ -1,8 +1,7 @@
-﻿
-
-namespace Loja.Dtos
+﻿namespace Loja.Dtos.Product
 {
-    public record ProductDto(
+    public record ProductDto
+     (
         int Id,
         string Name, 
         string Description,
