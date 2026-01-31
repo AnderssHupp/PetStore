@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|c:\\users\\ander\\desktop\\programa\u00E7\u00E3ocinel\\loja\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|c:\\users\\ander\\desktop\\programa\u00E7\u00E3ocinel\\loja\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|c:\\users\\ander\\desktop\\programa\u00E7\u00E3ocinel\\loja\\gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|solutionrelative:gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|c:\\users\\ander\\desktop\\programa\u00E7\u00E3ocinel\\loja\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|c:\\users\\ander\\desktop\\programa\u00E7\u00E3ocinel\\loja\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|solutionrelative:dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|c:\\users\\ander\\desktop\\programa\u00E7\u00E3ocinel\\loja\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|c:\\users\\ander\\desktop\\programa\u00E7\u00E3ocinel\\loja\\dtos\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|solutionrelative:dtos\\user\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|c:\\users\\ander\\desktop\\programa\u00E7\u00E3ocinel\\loja\\models\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8ED59625-A3AB-404B-8600-7A414DCB061B}|Loja.csproj|solutionrelative:models\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 450,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,40 +66,66 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "gitignore",
-              "DocumentMoniker": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\gitignore",
-              "RelativeDocumentMoniker": "gitignore",
-              "ToolTip": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\gitignore",
-              "RelativeToolTip": "gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-01-30T16:05:53.815Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T15:52:16.988Z",
+              "WhenOpened": "2026-01-30T17:09:50.944Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductDto.cs",
-              "DocumentMoniker": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Dtos\\ProductDto.cs",
-              "RelativeDocumentMoniker": "Dtos\\ProductDto.cs",
-              "ToolTip": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Dtos\\ProductDto.cs",
-              "RelativeToolTip": "Dtos\\ProductDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-30T15:49:21.994Z"
+              "WhenOpened": "2026-01-30T17:09:44.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Models\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "Models\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Models\\Enums\\UserRole.cs",
+              "RelativeToolTip": "Models\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T16:54:07.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T16:49:43.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Dtos\\User\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\User\\CreateUserDto.cs",
+              "ToolTip": "C:\\Users\\ander\\Desktop\\Programa\u00E7\u00E3oCINEL\\Loja\\Dtos\\User\\CreateUserDto.cs",
+              "RelativeToolTip": "Dtos\\User\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T16:48:58.161Z"
             }
           ]
         },
