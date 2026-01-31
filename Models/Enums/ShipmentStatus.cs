@@ -2,12 +2,12 @@
 {
     public enum ShipmentStatus
     {
-        Pending,
-        Processing,
-        Shipped, 
-        OutForDelivery,
-        Delivered,
-        Cancelled,
-        Returned
+        Pending = 1,
+        Processing = 2,
+        Shipped = 3, 
+        OutForDelivery = 4,
+        Delivered = 5,
+        Cancelled = 6,
+        Returned = 7,
     }
 }
