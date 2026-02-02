@@ -13,8 +13,11 @@ namespace Loja.Models
         [Required,EmailAddress]
         public required string Email { get; set; }
         public required string PasswordHash { get; set; }
-        public int RoleId { get; set; }
         public UserRole Role { get; set; }
         public bool IsActive { get; set; } = true;
+
+        public Cart? Cart { get; set; }
+
+        public ICollection<Address> Addresses { get; set; } = new List<Address>();
     }
 }

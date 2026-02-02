@@ -12,11 +12,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dtos\Address\" />
-    <Folder Include="Dtos\Shipment\" />
-    <Folder Include="Dtos\Payment\" />
-    <Folder Include="Dtos\Order\" />
-  </ItemGroup>
-
 </Project>
