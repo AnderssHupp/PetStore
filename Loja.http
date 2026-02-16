@@ -4,3 +4,42 @@ GET {{Loja_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+GET {{Loja_HostAddress}}/api/products
+Accept: application/json
+
+###
+GET {{Loja_HostAddress}}/api/products/2
+Accept: application/json
+
+###
+POST {{Loja_HostAddress}}/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Product 1",
+    "description": "Description 1",
+    "categoryId": 2,
+    "price": 100,
+    "stock": 10
+}
+
+###
+PUT {{Loja_HostAddress}}/api/products/2
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Product 1",
+    "description": "Description 3",
+    "categoryId": 2,
+    "price": 100,
+    "stock": 15,
+    "isActive": true
+}
+
+###
+DELETE {{Loja_HostAddress}}/api/products/1
+Accept: application/json
+
+### 

@@ -32,11 +32,14 @@ namespace Loja.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Product>()
-                    .HasOne(p => p.Stock)
-                    .WithOne(s => s.Product)
-                    .HasForeignKey<Stock>(s => s.ProductId)
-                    .OnDelete(DeleteBehavior.Restrict);
-            
+                .HasOne(p => p.Stock)
+                .WithOne(s => s.Product)
+                .HasForeignKey<Stock>(s => s.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Price)
+                .HasPrecision(18, 2);
 
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.Payment)
@@ -44,7 +47,9 @@ namespace Loja.Data
                 .HasForeignKey<Payment>( p => p.OrderId )
                 .OnDelete(DeleteBehavior.Restrict);
 
-
+            modelBuilder.Entity<Order>()
+                .Property(o => o.Total)
+                .HasPrecision(18, 2);
 
             modelBuilder.Entity<Order>()
                 .HasOne(s => s.Shipment )
@@ -52,10 +57,19 @@ namespace Loja.Data
                 .HasForeignKey<Shipment>(p => p.OrderId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            //important to define decimal filds
+            modelBuilder.Entity<OrderItem>()
+                .Property(oi => oi.PriceAtPurchase)
+                .HasPrecision(18, 2);
 
+            modelBuilder.Entity<Order>()
+                .Property(o => o.Total)
+                .HasPrecision(18, 2);
 
+            modelBuilder.Entity<Payment>()
+                .Property(p => p.Amount)
+                .HasPrecision(18, 2);
         }
-
 
     }
 

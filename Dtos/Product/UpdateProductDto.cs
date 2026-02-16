@@ -8,6 +8,7 @@ namespace Loja.Dtos.Product
             [StringLength(100)] string? Description,
             [Required][Range(1, 50)] int CategoryId,
             [Required][Range(1, 1000)] decimal Price,
-            [Required][Range(0, int.MaxValue)] int Stock
+            [Required][Range(0, int.MaxValue)] int Stock,
+            [Required] bool IsActive
         );
 }

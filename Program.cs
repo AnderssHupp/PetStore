@@ -1,3 +1,7 @@
+using Loja.Data;
+using Loja.Services.Interfaces;
+using Loja.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace Loja
 {
@@ -13,6 +17,16 @@ namespace Loja
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
 
+            //validation
+            builder.Services.AddValidation();
+
+            //configuration of connection
+            builder.Services.AddDbContext<PetStoreContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            //services
+            builder.Services.AddScoped<IProductService, ProductService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -27,6 +41,8 @@ namespace Loja
 
 
             app.MapControllers();
+
+            app.MigrateDb();
 
             app.Run();
         }
