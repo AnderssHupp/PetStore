@@ -5,7 +5,8 @@ namespace Loja.Dtos.Order
     public record OrderDetailsDto(
         int Id,
         int UserId,
-        OrderStatus Status,
+        int StatusId,
+        string Status,
         decimal TotalAmount,
         DateTime CreatedAt,
         IReadOnlyCollection<OrderItemDetailsDto> Items
@@ -13,7 +14,6 @@ namespace Loja.Dtos.Order
     public record OrderItemDetailsDto(
         int ProductId,
         string ProductName,
-        OrderStatus Status,
         decimal UnitPrice,
         int Quantity,
         decimal SubTotal

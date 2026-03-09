@@ -26,6 +26,11 @@ namespace Loja
 
             //services
             builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IStockService, StockService>();
+            builder.Services.AddScoped<ICartService, CartService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
 
             var app = builder.Build();
 

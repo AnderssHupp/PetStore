@@ -44,7 +44,7 @@ namespace Loja.Data
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.Payment)
                 .WithOne(o => o.Order)
-                .HasForeignKey<Payment>( p => p.OrderId )
+                .HasForeignKey<Payment>(p => p.OrderId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Order>()
@@ -52,7 +52,7 @@ namespace Loja.Data
                 .HasPrecision(18, 2);
 
             modelBuilder.Entity<Order>()
-                .HasOne(s => s.Shipment )
+                .HasOne(s => s.Shipment)
                 .WithOne(o => o.Order)
                 .HasForeignKey<Shipment>(p => p.OrderId)
                 .OnDelete(DeleteBehavior.Restrict);

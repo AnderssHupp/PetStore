@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Loja.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace Loja.Dtos.User
 {
@@ -7,7 +8,7 @@ namespace Loja.Dtos.User
         [Required][StringLength(50, MinimumLength = 3)] string Name,
         [Required][EmailAddress] string Email,
         [Required][MinLength(8)] string Password,
-        [Required] int RoleId, 
+        [Required] UserRole RoleId, 
         bool IsActive
     );
     

@@ -6,15 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Loja.Services
 {
-    public class ProductService : IProductService
+    public class ProductService(PetStoreContext context, IStockService stockService) : IProductService
     {
-        private readonly PetStoreContext _context;
+        private readonly PetStoreContext _context = context;
+        private readonly IStockService _stockService = stockService;
 
-        public ProductService(PetStoreContext context)
-        {
-            _context = context;
-
-        }
         public async Task<IEnumerable<ProductDetailsDto>> GetAllAsync()
         {
             return await _context.Products
@@ -24,8 +20,8 @@ namespace Loja.Services
                     p.Id,
                     p.Name,
                     p.Description ?? "",
-                    p.CategoryId,
-                    p.Category != null ? p.Category.Name : "",
+                    (int)p.CategoryId,
+                    p.Category != null ? p.Category.Name.ToString() : "",
                     p.Price,
                     p.Stock != null ? p.Stock.Quantity : 0,
                     p.IsActive
@@ -44,8 +40,8 @@ namespace Loja.Services
                     p.Id,
                     p.Name,
                     p.Description ?? "",
-                    p.CategoryId,
-                    p.Category != null ? p.Category.Name : "",
+                    (int)p.CategoryId,
+                    p.Category != null ? p.Category.Name.ToString() : "",
                     p.Price,
                     p.Stock != null ? p.Stock.Quantity : 0,
                     p.IsActive
@@ -54,7 +50,7 @@ namespace Loja.Services
                 .FirstOrDefaultAsync();
         }
 
-        public async Task<ProductDto> CreateAsync(CreateProductDto newProduct)
+        public async Task<ProductDetailsDto> CreateAsync(CreateProductDto newProduct)
         {
             Product product = new()
             {
@@ -62,7 +58,6 @@ namespace Loja.Services
                 Description = newProduct.Description,
                 CategoryId = newProduct.CategoryId,
                 Price = newProduct.Price,
-                Stock = new Stock { Quantity = newProduct.Stock, CreatedAt = DateTime.UtcNow },
                 IsActive = true,
                 CreatedAt = DateTime.UtcNow
             };
@@ -70,12 +65,17 @@ namespace Loja.Services
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
-            return new ProductDto(
+            await _stockService.CreateOrUpdateStockAsync(product.Id, newProduct.Stock);
+            var currentStock = await _stockService.GetStockByProductIdAsync(product.Id);
+
+            return new ProductDetailsDto(
                 product.Id,
                 product.Name,
-                product.Description,
-                product.CategoryId,
+                product.Description ?? "",
+                (int)product.CategoryId,
+                product.Category != null ? product.Category.Name.ToString() : "",
                 product.Price,
+                currentStock,
                 product.IsActive
             );
         }
@@ -98,17 +98,9 @@ namespace Loja.Services
             product.IsActive = updateDto.IsActive;
             product.UpdatedAt = DateTime.UtcNow;
 
-            if (product.Stock != null)
-            {
-                product.Stock.Quantity = updateDto.Stock;
-                product.Stock.UpdatedAt = DateTime.UtcNow;
-            }
-            else
-            {
-                product.Stock = new Stock { Quantity = updateDto.Stock, Product = product };
-            }
-
             await _context.SaveChangesAsync();
+            await _stockService.CreateOrUpdateStockAsync(product.Id, updateDto.Stock);
+
             return true;
         }
 

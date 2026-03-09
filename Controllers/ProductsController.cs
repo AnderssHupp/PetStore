@@ -22,6 +22,7 @@ namespace Loja.Controllers
             return Ok(products);
         }
 
+        // GET api/products/5 (SHOW)
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {

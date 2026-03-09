@@ -9,7 +9,7 @@ namespace Loja.Services.Interfaces
         //buscar produto
         Task<ProductDetailsDto?> GetByIdAsync(int id);
         //criar produto
-        Task<ProductDto> CreateAsync(CreateProductDto createDto);
+        Task<ProductDetailsDto> CreateAsync(CreateProductDto createDto);
         //bool or false, bool atualizou false n encontrou
         Task<bool> UpdateAsync(int id, UpdateProductDto updateDto);
         //Eliminar produto

@@ -8,7 +8,7 @@ GET {{Loja_HostAddress}}/api/products
 Accept: application/json
 
 ###
-GET {{Loja_HostAddress}}/api/products/2
+GET {{Loja_HostAddress}}/api/products/4
 Accept: application/json
 
 ###
@@ -17,20 +17,20 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "Product 1",
-    "description": "Description 1",
-    "categoryId": 2,
-    "price": 100,
+    "name": "Product 4",
+    "description": "Description 4",
+    "categoryId": 3,
+    "price": 150,
     "stock": 10
 }
 
 ###
-PUT {{Loja_HostAddress}}/api/products/2
+PUT {{Loja_HostAddress}}/api/products/3
 Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "Product 1",
+    "name": "Product 3",
     "description": "Description 3",
     "categoryId": 2,
     "price": 100,
@@ -39,7 +39,154 @@ Accept: application/json
 }
 
 ###
-DELETE {{Loja_HostAddress}}/api/products/1
+DELETE {{Loja_HostAddress}}/api/products/2
+Accept: application/json
+
+###
+
+//CATEGORIES
+GET {{Loja_HostAddress}}/api/categories
+Accept: application/json
+
+###
+GET {{Loja_HostAddress}}/api/categories/2
+Accept: application/json
+
+###
+POST {{Loja_HostAddress}}/api/categories
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Utility"
+}
+
+###
+PUT {{Loja_HostAddress}}/api/categories/4
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Category Updated"
+}
+
+###
+DELETE {{Loja_HostAddress}}/api/categories/4
+Accept: application/json
+
+###
+
+//USERS
+GET {{Loja_HostAddress}}/api/users
+Accept: application/json
+
+###
+GET {{Loja_HostAddress}}/api/users/1
+Accept: application/json
+
+###
+POST {{Loja_HostAddress}}/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Admin",
+    "email": "admin@example.pt",
+    "password": "password123",
+    "roleId": 1
+}
+
+###
+PUT {{Loja_HostAddress}}/api/users/4
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "User 4",
+    "email": "example4@example.pt",
+    "password": "password123",
+    "roleId": 3,
+    "isActive": true
+}
+
+###
+
+DELETE {{Loja_HostAddress}}/api/users/5
+Accept: application/json
+
+###
+//CART
+GET {{Loja_HostAddress}}/api/cart/1234567890
+Accept: application/json
+
+###
+POST {{Loja_HostAddress}}/api/cart/1234567890/items
+Content-Type: application/json
+
+[
+    {
+        "productId": 2,
+        "quantity": 1
+    },
+    {
+        "productId": 3,
+        "quantity": 1
+    },
+    {
+        "productId": 4,
+        "quantity": 1
+    }
+]
+
+###
+DELETE {{Loja_HostAddress}}/api/cart/1234567890/items
+Content-Type: application/json
+
+[2]
+
+###
+PUT {{Loja_HostAddress}}/api/cart/1234567890/items/4?quantity=2
+Accept: application/json
+
+###
+DELETE {{Loja_HostAddress}}/api/cart/1234567890/clear
 Accept: application/json
 
 ### 
+
+//ORDERS
+GET {{Loja_HostAddress}}/api/orders
+Accept: application/json
+
+###
+GET {{Loja_HostAddress}}/api/orders/4
+Accept: application/json
+
+###
+POST {{Loja_HostAddress}}/api/orders
+Content-Type: application/json
+
+{
+    "userId": 2,
+    "items": [
+        {
+            "productId": 2,
+            "quantity": 1
+        }
+
+    ]   
+}
+
+###
+PUT {{Loja_HostAddress}}/api/orders/4
+Content-Type: application/json
+
+{
+    "status": 1
+}
+
+###
+DELETE {{Loja_HostAddress}}/api/orders/3
+Accept: application/json    
+
+
